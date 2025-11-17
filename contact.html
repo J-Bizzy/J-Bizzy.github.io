@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – Jackson Bizzell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">Jackson</a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="contact.html" class="nav-link current">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main contact-main">
+      <section class="section">
+        <div class="container contact-layout">
+          <div>
+            <h1 class="contact-heading">Contact</h1>
+            <p class="contact-lead">
+              Have a project or just want to say hi? Send a message below.
+            </p>
+            <p class="contact-lead" style="margin-top:1.4rem;">
+              You can also email me directly at
+              <a href="mailto:jbizzell09@gmail.com" class="button-link">jbizzell09@gmail.com</a>.
+            </p>
+          </div>
+
+          <div>
+            <form class="contact-form" action="mailto:jbizzell09@gmail.com" method="post" enctype="text/plain">
+              <div class="field-group">
+                <label class="field-label" for="name">Name</label>
+                <input id="name" name="Name" class="field-input" placeholder="Your name">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="email">Email</label>
+                <input id="email" name="Email" type="email" class="field-input" placeholder="you@example.com">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="subject">Subject</label>
+                <input id="subject" name="Subject" class="field-input" placeholder="Optional subject">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="message">Message</label>
+                <textarea id="message" name="Message" class="field-textarea" placeholder="Write your message here..."></textarea>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="button-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© 2025 Jackson Bizzell</span>
+        <span>Thanks for stopping by.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
