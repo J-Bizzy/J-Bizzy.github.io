@@ -140,11 +140,10 @@ a {
   padding-top: 4.4rem;
 }
 
-.hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
-  align-items: center;
-  gap: 3.3rem;
+.hero-inner > div:first-child {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero-badge {
@@ -231,23 +230,43 @@ a {
 
 /* Hero photos */
 
+/* --- FIXED HERO PHOTO LAYOUT --- */
+
 .hero-photos {
   position: relative;
-  min-height: 320px;
+  min-height: 360px;
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
 }
 
+/* Uniform card-style photos instead of chaos */
 .hero-photo {
-  position: absolute;
-  border-radius: 1.75rem;
+  width: 180px;
+  height: 130px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.hero-photo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(40, 25, 15, 0.28);
 }
 
 .hero-photo img {
+  object-fit: cover;
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
+
 
 .photo-top-left {
   width: 220px;
@@ -330,6 +349,32 @@ a {
   line-height: 1.7;
 }
 
+.pill-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pill {
+  width: 92%;
+  max-width: 1280px;
+  aspect-ratio: 4 / 1.3;
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+}
+
+.pill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 /* Cards / grids */
 
 .grid-3 {
@@ -410,7 +455,7 @@ a {
 /* About */
 
 .about-main {
-  padding-top: 4.4rem;
+  padding-top: 1rem;
 }
 
 .about-layout {
@@ -543,8 +588,6 @@ a {
   margin-top: 1.2rem;
 }
 
-/* Footer */
-
 .site-footer {
   border-top: 1px solid var(--border);
   padding-block: 1.4rem;
@@ -649,3 +692,112 @@ a {
     gap: 0.5rem;
   }
 }
+
+/* ==== MODAL GALLERY ==== */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 75vw;
+  max-width: 1000px;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-heading {
+  margin: 0;
+  padding: 1rem 1.5rem 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--foreground);
+}
+
+
+.modal-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.modal-caption {
+  padding: 1.2rem 1.6rem;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+}
+
+.modal-caption h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.3rem;
+}
+
+.modal-caption p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== SLIDESHOW ARROWS ===== */
+
+.modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  user-select: none;
+  transition: opacity 0.2s ease;
+  z-index: 1001;
+}
+
+.modal-arrow:hover {
+  color: white;
+}
+
+.left-arrow {
+  left: 1rem;
+}
+
+.right-arrow {
+  right: 1rem;
+}
+
+/* smooth fade animation between slides */
+.modal-image-fade {
+  animation: fadeSlide 0.25s ease;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

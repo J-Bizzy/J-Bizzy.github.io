@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
   <div class="page">
     <header class="site-header">
       <div class="container header-inner">
-        <a href="index.html" class="logo">Jackson</a>
+        <a href="index.html" class="logo">Jackson Bizzell</a>
         <nav class="nav-links">
           <a href="index.html" class="nav-link current">Home</a>
           <a href="about.html" class="nav-link">About</a>
@@ -31,6 +32,9 @@
             <p class="hero-text">
               Hey there! I'm Jackson Bizzell, and im the best junior here at NCSSM!
               My portfolio is lowkey lame, but go ahead and have a look around!
+            </p>
+            <p class="hero-text">
+              Click on the photos to view my gallery of my favorite photos!
             </p>
             <div class="hero-buttons">
               <a href="projects.html" class="button-primary">View Work</a>
@@ -58,19 +62,23 @@
           </div>
 
           <div class="hero-photos">
-            <div class="hero-photo photo-top-left">
+            <div class="hero-photo" data-title="Sophie" data-subtitle="Hanging out">
               <img src="sophie.jpeg" alt="photo 1">
             </div>
-            <div class="hero-photo photo-top-right">
+          
+            <div class="hero-photo" data-title="Philmont" data-subtitle="Hiking trip">
               <img src="Philmont.jpeg" alt="photo 2">
             </div>
-            <div class="hero-photo photo-bottom-left">
+          
+            <div class="hero-photo" data-title="Ravens Game" data-subtitle="Great day!">
               <img src="Ravens.jpeg" alt="photo 3">
             </div>
-            <div class="hero-photo photo-bottom-right">
+          
+            <div class="hero-photo" data-title="Masters" data-subtitle="Golf vibes">
               <img src="Masters.jpeg" alt="photo 4">
             </div>
           </div>
+          
         </div>
       </section>
 
@@ -127,9 +135,9 @@
       <section class="section">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">Featured Work</h2>
+            <h2 class="section-title">Things I Have Done</h2>
             <p class="section-subtitle">
-              A selection of recent projects.
+              A selection of recent projects, classes, and extracurriculars!
             </p>
           </div>
 
@@ -195,7 +203,7 @@
             </p>
           </div>
           <div class="cta-buttons">
-            <a href="contact.html" class="button-primary">Start a Conversation</a>
+            <a href="contact.html" class="button-primary">Say hello 👋</a>
           </div>
         </div>
       </section>
@@ -204,9 +212,30 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© 2025 Jackson Bizzell</span>
-        <span>Built with way too much caffeine.</span>
       </div>
     </footer>
   </div>
+
+  <!-- ========== PHOTO GALLERY ========== -->
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+  
+      <h2 class="modal-heading">My Photo Gallery!</h2>
+      <span class="modal-close">&times;</span>
+  
+      <div class="modal-arrow left-arrow">&#10094;</div>
+      <div class="modal-arrow right-arrow">&#10095;</div>
+  
+      <img id="modalImage" />
+  
+      <div class="modal-caption">
+        <h3 id="modalTitle"></h3>
+        <p id="modalSubtitle"></p>
+      </div>
+    </div>
+  </div>
+
+
+<script src="gallery.js"></script>
 </body>
 </html>
