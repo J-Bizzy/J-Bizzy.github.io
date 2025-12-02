@@ -2,75 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – Jackson Bizzell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="page">
     <header class="site-header">
       <div class="container header-inner">
-        <a href="index.html" class="logo">Jackson</a>
-        <nav class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="projects.html" class="nav-link">Projects</a>
-          <a href="contact.html" class="nav-link current">Contact</a>
+        <a class="logo" href="index.html">
+          <img src="photos/signature.png" alt="Jackson Bizzell signature">
+          <span class="sr-only">Jackson Bizzell</span>
+        </a>
+        <nav class="nav-links" id="navMenu">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link active" href="contact.html">Contact</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
-    <main class="page-main contact-main">
+    <div class="bg-accents">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <main class="page-main">
       <section class="section">
-        <div class="container contact-layout">
-          <div>
-            <h1 class="contact-heading">Contact</h1>
-            <p class="contact-lead">
-              Have a project or just want to say hi? Send a message below.
-            </p>
-            <p class="contact-lead" style="margin-top:1.4rem;">
-              You can also email me directly at
-              <a href="mailto:jbizzell09@gmail.com" class="button-link">jbizzell09@gmail.com</a>.
-            </p>
+        <div class="container">
+          <div class="section-header reveal-up">
+            <p class="eyebrow">Contact</p>
+            <h1 class="section-title">Lets chat!</h1>
+            <p class="section-subtitle">I'll talk about anything!</p>
           </div>
 
-          <div>
-            <form class="contact-form" action="mailto:jbizzell09@gmail.com" method="post" enctype="text/plain">
-              <div class="field-group">
-                <label class="field-label" for="name">Name</label>
-                <input id="name" name="Name" class="field-input" placeholder="Your name">
+          <div class="contact-layout">
+            <div class="card reveal-left">
+              <div class="contact-list">
+                <div class="pill">Email</div>
+                <p>jbizzell09@gmail.com</p>
+                <div class="pill">Other</div>
+                <p>GitHub: github.com/J-Bizzy</p>
               </div>
+            </div>
 
-              <div class="field-group">
-                <label class="field-label" for="email">Email</label>
-                <input id="email" name="Email" type="email" class="field-input" placeholder="you@example.com">
-              </div>
-
-              <div class="field-group">
-                <label class="field-label" for="subject">Subject</label>
-                <input id="subject" name="Subject" class="field-input" placeholder="Optional subject">
-              </div>
-
-              <div class="field-group">
-                <label class="field-label" for="message">Message</label>
-                <textarea id="message" name="Message" class="field-textarea" placeholder="Write your message here..."></textarea>
-              </div>
-
-              <div class="form-footer">
-                <button type="submit" class="button-primary">Send Message</button>
-              </div>
-            </form>
+            <div class="card form-card reveal-right">
+              <form action="mailto:jbizzell09@gmail.com" method="post" enctype="text/plain">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="Name" placeholder="Your name">
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="Email" type="email" placeholder="you@example.com">
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="Message" placeholder="Enter message here:"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send Message</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
+      <div class="container footer-inner reveal-up">
         <span>© 2025 Jackson Bizzell</span>
-        <span>Thanks for stopping by.</span>
+        <span>Have a great rest of your day 🙂</span>
       </div>
     </footer>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

@@ -2,141 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects - Jackson Bizzell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects – Jackson Bizzell</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="page">
     <header class="site-header">
       <div class="container header-inner">
-        <a href="index.html" class="logo">Jackson Bizzell</a>
-        <nav class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="projects.html" class="nav-link current">Projects</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+        <a class="logo" href="index.html">
+          <img src="photos/signature.png" alt="Jackson Bizzell signature">
+          <span class="sr-only">Jackson Bizzell</span>
+        </a>
+        <nav class="nav-links" id="navMenu">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link active" href="projects.html">Projects</a>
+          <a class="nav-link" href="contact.html">Contact</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
+
+    <div class="bg-accents">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
 
     <main class="page-main">
       <section class="section">
         <div class="container">
-          <div class="section-header">
-            <h1 class="section-title">Featured Work</h1>
-            <p class="section-subtitle">
-              A collection of projects that showcase my expertise in building
-              scalable, user-focused digital experiences.
-            </p>
+          <div class="section-header reveal-up">
+            <p class="eyebrow">Projects</p>
+            <h1 class="section-title">Selected work that reflects my skills and passion</h1>
+            <p class="section-subtitle">A mix of school projects, solo builds, and just things from tutorials</p>
           </div>
 
-          <div class="projects-grid">
-            <article class="project-card">
-              <div class="project-badge">Commerce</div>
-              <h3 class="project-title">E-Commerce Platform</h3>
-              <p class="project-text">
-                A modern e-commerce solution with real-time inventory tracking,
-                secure payment processing, and personalized recommendations.
-              </p>
-              <div class="tag-row">
-                <span class="tag-pill">React</span>
-                <span class="tag-pill">Node.js</span>
-                <span class="tag-pill">PostgreSQL</span>
-                <span class="tag-pill">Stripe</span>
+          <div class="project-grid">
+            <article class="card project-card reveal-up">
+              <div class="project-media">
+                🌐
+              </div>
+              <div class="project-body">
+                <div class="pill tag-warm">Solo • 2024</div>
+                <h3 class="project-title">Mock Online Store</h3>
+                <p class="project-text">Combined my front-end web dev knowlege with new tools and frameworks to create a fully functional online store with an integrated backend.</p>
+                <div class="project-actions">
+                  <span class="tag">React</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">TailwindCSS</span>
+                </div>
+                <div class="project-meta">View it on my github!</div>
+                <div class="project-actions">
+                  <a class="btn btn-primary" href="">Source</a>
+                </div>
               </div>
             </article>
 
-            <article class="project-card">
-              <div class="project-badge">AI Tools</div>
-              <h3 class="project-title">AI Content Generator</h3>
-              <p class="project-text">
-                Machine learning powered content generation that helps creators
-                produce engaging, on-brand copy for marketing campaigns.
-              </p>
-              <div class="tag-row">
-                <span class="tag-pill">Python</span>
-                <span class="tag-pill">TensorFlow</span>
-                <span class="tag-pill">FastAPI</span>
-                <span class="tag-pill">React</span>
+            <article class="card project-card reveal-up reveal-delay-1">
+              <div class="project-media">
+                🐍
+              </div>
+              <div class="project-body">
+                <div class="pill tag-warm">Solo • 2023-24</div>
+                <h3 class="project-title">Various Python Projects</h3>
+                <p class="project-text">Just some fun things that I copied off of tutorials</p>
+                <div class="project-actions">
+                  <span class="tag">Python</span>
+                  <span class="tag">APIs</span>
+                  <span class="tag">PyGame</span>
+                </div>
+                <div class="project-meta">View them on my GitHub!</div>
+                <div class="project-actions">
+                  <a class="btn btn-primary" href="https://github.com/J-Bizzy/Python_Project">Source</a>
+                </div>
               </div>
             </article>
 
-            <article class="project-card">
-              <div class="project-badge">Design</div>
-              <h3 class="project-title">Design System</h3>
-              <p class="project-text">
-                Comprehensive component library and brand guidelines built to keep
-                designs consistent and reusable across projects.
-              </p>
-              <div class="tag-row">
-                <span class="tag-pill">Figma</span>
-                <span class="tag-pill">Storybook</span>
+            <article class="card project-card reveal-up reveal-delay-2">
+              <div class="project-media">
+                👨‍💻
+              </div>
+              <div class="project-body">
+                <div class="pill tag-warm">Solo • 2025</div>
+                <h3 class="project-title">Personal Portfolio Website</h3>
+                <p class="project-text">You're looking at it right now!</p>
+                <div class="project-actions">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-meta">View it on my github!</div>
+                <div class="project-actions">
+                  <a class="btn btn-primary" href="https://github.com/J-Bizzy/J-Bizzy.github.io">Source</a>
+                </div>
               </div>
             </article>
-
-            <article class="project-card">
-              <div class="project-badge">SaaS</div>
-              <h3 class="project-title">Analytics Dashboard</h3>
-              <p class="project-text">
-                Real-time analytics dashboard with clean data visualizations and
-                configurable widgets for different users.
-              </p>
-              <div class="tag-row">
-                <span class="tag-pill">React</span>
-                <span class="tag-pill">APIs</span>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-badge">Fun</div>
-              <h3 class="project-title">Game Experiments</h3>
-              <p class="project-text">
-                Small Unity and web-based games exploring mechanics, physics,
-                and just messing around with ideas.
-              </p>
-              <div class="tag-row">
-                <span class="tag-pill">Unity</span>
-                <span class="tag-pill">C#</span>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-badge">Misc</div>
-              <h3 class="project-title">Random Tools</h3>
-              <p class="project-text">
-                Utility scripts, bots, and small web tools that solve tiny
-                annoyances in my day-to-day life.
-              </p>
-              <div class="tag-row">
-                <span class="tag-pill">Python</span>
-                <span class="tag-pill">JavaScript</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-muted cta">
-        <div class="container cta-inner">
-          <div class="cta-text">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="section-subtitle">
-              Interested in working together? Get in touch.
-            </p>
-          </div>
-          <div class="cta-buttons">
-            <a href="mailto:jbizzell09@gmail.com" class="button-primary">Send Email</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
+      <div class="container footer-inner reveal-up">
         <span>© 2025 Jackson Bizzell</span>
+        <span>Have a great rest of your day 🙂</span>
       </div>
     </footer>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

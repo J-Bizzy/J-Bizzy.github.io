@@ -2,98 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About - Jackson Bizzell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Jackson Bizzell</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="page">
-    
     <header class="site-header">
       <div class="container header-inner">
-        <a href="index.html" class="logo">Jackson Bizzell</a>
-        <nav class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link current">About</a>
-          <a href="projects.html" class="nav-link">Projects</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+        <a class="logo" href="index.html">
+          <img src="photos/signature.png" alt="Jackson Bizzell signature">
+          <span class="sr-only">Jackson Bizzell</span>
+        </a>
+        <nav class="nav-links" id="navMenu">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="about.html">About</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="contact.html">Contact</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      
     </header>
 
-    <div class="pill-container">
-      <div class="pill">
-        <img src="./photos/nature.jpeg" alt="Image">
-      </div>
+    <div class="bg-accents">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
     </div>
 
-    <main class="page-main about-main">
-      <section class="section">
-        <div class="container about-layout">
-          <h1 class="about-title">About Me</h1>
-
-          <div class="about-body">
-            <p>
-              My name is Jackson Bizzell, and I am currently a junior attending the North Carolina School of Science and Mathematics.
-              My primary focus is on computer science and software development,
-              where I have cultivated a strong passion for coding and problem-solving.
-            </p>
-
-            <p>
-              My work spans across web development, game design, and small
-              self-coded projects that utilize many frameworks. I believe in the
-              power of simplicity—that the best solutions often come from removing
-              complexity rather than adding it.
-            </p>
-
-            <p>
-              When I'm not learning or working, you'll find me exploring new
-              technologies, playing sports, or listening to some of my favorite tunes!
-            </p>
+    <main class="page-main">
+      <section class="section about-section">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <p class="eyebrow">About</p>
+            <h1 class="section-title">Jackson Bizzell</h1>
+            <p class="section-subtitle">I'm a student at the North Carolina School of Science and Mathematics who loves STEM!</p>
           </div>
 
-          <div class="about-stats-row">
-            <div class="about-stat-card">
-              <div class="about-stat-value">3+</div>
-              <div class="about-stat-label">Years Experience</div>
-            </div>
-            <div class="about-stat-card">
-              <div class="about-stat-value">6</div>
-              <div class="about-stat-label">Languages I Have Experience In</div>
-            </div>
-            <div class="about-stat-card">
-              <div class="about-stat-value">16</div>
-              <div class="about-stat-label">Years Old</div>
-            </div>
-            <div class="about-stat-card">
-              <div class="about-stat-value">🌲</div>
-              <div class="about-stat-label">I love nature!</div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div class="about-layout">
+            <div class="card reveal-left">
+              <p>Outside of class, I practice my coding skills, work on school work, and of course play games!</p>
+              <ul>
+                <li>Learning Java in my FOOD class</li>
+                <li>Maintaining all A's</li>
+                <li>I love video games! (Mario Kart, Geometry Dash, Clash Royale, etc!)</li>
+              </ul>
 
-      <section class="section-muted cta">
-        <div class="container cta-inner">
-          <div class="cta-text">
-            <h2 class="section-title">Let's Work Together</h2>
-            <p class="section-subtitle">
-              Feel free to reach out for any colabs!
-            </p>
-          </div>
-          <div class="cta-buttons">
-            <a href="contact.html" class="button-primary">Say hello 👋</a>
+              <div class="section-header" style="margin-top: var(--space-md);">
+                <h2 class="section-title" style="font-size:1.4rem;">Skills &amp; Tools</h2>
+                <p class="section-subtitle">Topics I am strong in</p>
+              </div>
+              <div class="skills-grid reveal-up">
+                <span class="tag">Python</span>
+                <span class="tag">C#</span>
+                <span class="tag">Java</span>
+                <span class="tag">WebDev</span>
+                <span class="tag">Unity</span>
+                <span class="tag">Finance</span>
+              </div>
+
+              <div class="section-header" style="margin-top: var(--space-md);">
+                <h2 class="section-title" style="font-size:1.4rem;">Timeline</h2>
+                <p class="section-subtitle">Notable personal events</p>
+              </div>
+              <div class="timeline">
+                <div class="timeline-item reveal-up">
+                  <h4>2025 – Present</h4>
+                  <p>NCSSM • Building a personal portfolio site and learning Java</p>
+                </div>
+                <div class="timeline-item reveal-up reveal-delay-1">
+                  <h4>2023 – 2024</h4>
+                  <p>Independent builds • Built various small projects in Python and JavaScript</p>
+                </div>
+                <div class="timeline-item reveal-up reveal-delay-2">
+                  <h4>2022 – 2023</h4>
+                  <p>Early coding • Learned fundamentals in Python, and also explored game development in Unity</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-column reveal-right">
+              <div class="card profile-card">
+                <img class="avatar" src="photos/sophie.jpeg" alt="Portrait of Jackson Bizzell">
+                <h3>Jackson Bizzell</h3>
+                <p class="section-subtitle" style="margin:0;">Student</p>
+                <p class="section-subtitle" style="margin:0;">Durham, NC</p>
+                <div class="profile-tags">
+                  <span class="pill">Coding</span>
+                  <span class="pill">Finance</span>
+                  <span class="pill">Gaming</span>
+                </div>
+                <div class="project-actions" style="justify-content:center;">
+                  <a class="btn btn-primary" href="projects.html">See Projects</a>
+                  <a class="btn btn-ghost" href="contact.html">Contact</a>
+                </div>
+              </div>
+              <div class="about-social-pills">
+                <a class="pill pill-twitter" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a class="pill pill-github" href="https://github.com/J-Bizzy" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="pill pill-instagram" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
+      <div class="container footer-inner reveal-up">
         <span>© 2025 Jackson Bizzell</span>
+        <span>Have a great rest of your day 🙂</span>
       </div>
     </footer>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
